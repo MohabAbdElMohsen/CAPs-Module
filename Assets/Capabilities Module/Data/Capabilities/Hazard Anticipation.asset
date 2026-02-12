@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90ddce03501f7174baa881dc12b1b1e7, type: 3}
-  m_Name: SituationalAwareness
+  m_Name: Hazard Anticipation
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitiesModule.Capability
-  _capabilityId: 1
-  _capabilityName: Siituational Awareness
-  _customEvaluation: {fileID: 11400000, guid: 09a4b49dc52c19e4dbf37de26ab5e5d7, type: 2}
+  _capabilityId: 3
+  _capabilityName: Hazard Anticipation
+  _customEvaluation: {fileID: 11400000, guid: 6bfacc8bf98c0c64a82c31b8ddac17b0, type: 2}

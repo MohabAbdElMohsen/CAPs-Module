@@ -7,7 +7,7 @@ namespace CapabilitiesModule
     {
         public static CapabilityManager Instance { get; private set; }
         
-        [SerializeField] private Capability _rootCapability;
+        [SerializeField] private EvaluationTree _evaluationTree;
         
         [SerializeField] private EvaluationContext _evaluationContextTemplate;
 
@@ -31,6 +31,6 @@ namespace CapabilitiesModule
 
         [ContextMenu("Evaluate Root Capability")]
         public void EvaluateRootCapability() =>
-            Debug.Log(_rootCapability?.Evaluate(EvaluationContext));
-    }   
+            Debug.Log(_evaluationTree?.Evaluate(EvaluationContext));
+    }
 }

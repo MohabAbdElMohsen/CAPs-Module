@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295c54f377d914c409e1f2a87225589f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitiesModule.CapabilityManager
-  _rootCapability: {fileID: 11400000, guid: 186eab31e808bde45a3c93080ca135c7, type: 2}
+  _evaluationTree: {fileID: 11400000, guid: fdbbcb3830bbfc84381ed9372d5c1a8d, type: 2}
   _evaluationContextTemplate: {fileID: 11400000, guid: d7ce596e2dc32f44cafd1365b1feddb8, type: 2}
   EvaluationContext: {fileID: 0}
 --- !u!4 &987222483
