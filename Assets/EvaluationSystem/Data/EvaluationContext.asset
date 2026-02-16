@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4e0b489cd82b49a9a8e18f65ba490, type: 3}
   m_Name: EvaluationContext
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitiesModule.MetricRegistry
-  _metricDictionary:
+  _parameterDictionary:
     keys:
     - DetectionLatency
     - AnticipationTiming
     - HazardPreventedScore
-    - AlaaLatency
     values:
-    - 0
     - 0
     - 0
     - 0

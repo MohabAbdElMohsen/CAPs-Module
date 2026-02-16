@@ -1,17 +1,17 @@
 using UnityEngine;
-using CapabilitiesModule.Utilities;
+using EvaluationSystem.Utilities;
 
-namespace CapabilitiesModule
+namespace EvaluationSystem
 {
     [CreateAssetMenu(fileName = "EvaluationContext", menuName = "Scriptable Objects/EvaluationContext")]
     public class EvaluationContext : ScriptableObject
     {
-        [SerializeField] private MetricDictionary _metricDictionary;
+        [SerializeField] private ParameterDictionary _parameterDictionary;
         
         public float this[string key]
         {
-            get => _metricDictionary[key];
-            set => _metricDictionary[key] = value;
+            get => _parameterDictionary[key];
+            set => _parameterDictionary[key] = value;
         }
     }   
 }

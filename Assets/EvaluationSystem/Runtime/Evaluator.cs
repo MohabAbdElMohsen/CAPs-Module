@@ -2,7 +2,7 @@ using UnityEngine;
 using XNode;
 using Sirenix.OdinInspector;
 
-namespace CapabilitiesModule
+namespace EvaluationSystem
 {
     public class Evaluator : Node
     {

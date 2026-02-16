@@ -1,4 +1,4 @@
-namespace CapabilitiesModule
+namespace EvaluationSystem
 {
     public class CustomEvaluator : Evaluator
     {

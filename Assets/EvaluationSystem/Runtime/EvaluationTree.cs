@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using XNode;
 
-namespace CapabilitiesModule
+namespace EvaluationSystem
 {
 	[CreateAssetMenu(fileName = "EvaluationTree", menuName = "Evaluation System/EvaluationTree")]
 	public sealed class EvaluationTree : NodeGraph

@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 
-namespace CapabilitiesModule
+namespace EvaluationSystem
 {
-    public class CapabilityManager : MonoBehaviour
+    public class EvaluationManager : MonoBehaviour
     {
-        public static CapabilityManager Instance { get; private set; }
+        public static EvaluationManager Instance { get; private set; }
         
         [SerializeField] private EvaluationTree _evaluationTree;
         

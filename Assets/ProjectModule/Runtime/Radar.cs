@@ -1,19 +1,30 @@
-using System;
 using UnityEngine;
-using CapabilitiesModule;
+using EvaluationSystem;
 
-public class Radar : MonoBehaviour
+public class Radar : MonoBehaviour, IDetectable
 {
     private EvaluationContext _evaluationContext;
 
+    private float _totalDetectionLatency;
+    
+    private float _avgLatency;
+    
+    public float AvgLatency => _avgLatency;
+
+    private int _detectionCount;
+    public int DetectionCount => _detectionCount;
+    
     private void Start()
     {
-        _evaluationContext = CapabilityManager.Instance.EvaluationContext;
+        _evaluationContext = EvaluationManager.Instance.EvaluationContext;
     }
 
     [ContextMenu("Detect")]
     public void Detect()
     {
-        _evaluationContext["DetectionLatency"] = Time.time;
+        _totalDetectionLatency = Time.time;
+        _detectionCount = 5;
+        
+        _avgLatency = _totalDetectionLatency / _detectionCount;
     }
 }
