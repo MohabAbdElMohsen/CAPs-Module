@@ -1,5 +1,5 @@
 using UnityEngine;
-using EvaluationSystem;
+using CapabilitySystem;
 
 public class Radar : MonoBehaviour, IDetectable
 {
@@ -26,5 +26,6 @@ public class Radar : MonoBehaviour, IDetectable
         _detectionCount = 5;
         
         _avgLatency = _totalDetectionLatency / _detectionCount;
+        _evaluationContext["DetectionLatency"] =  _avgLatency;
     }
 }

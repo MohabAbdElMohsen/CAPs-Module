@@ -1,7 +1,7 @@
 using UnityEngine;
 using EvaluationSystem.Utilities;
 
-namespace EvaluationSystem
+namespace CapabilitySystem
 {
     [CreateAssetMenu(fileName = "EvaluationContext", menuName = "Scriptable Objects/EvaluationContext")]
     public class EvaluationContext : ScriptableObject

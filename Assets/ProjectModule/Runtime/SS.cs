@@ -1,5 +1,5 @@
 using UnityEngine;
-using EvaluationSystem;
+using CapabilitySystem;
 
 [CreateAssetMenu(fileName = "SS", menuName = "Scriptable Objects/SS")]
 public class SS : ScriptableObject

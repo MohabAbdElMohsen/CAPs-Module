@@ -2,42 +2,45 @@ using UnityEngine;
 using XNode;
 using Sirenix.OdinInspector;
 
-namespace EvaluationSystem
+namespace CapabilitySystem
 {
-    public class Evaluator : Node
+    public sealed class Capability : Node, IEvaluable, IWeightable
     {
         [Input(connectionType = ConnectionType.Multiple)] 
-        [SerializeField] private Evaluator _dependencies;
+        [SerializeField] private Node _dependents;
         
         [Output(connectionType = ConnectionType.Multiple)] 
-        [SerializeField] private Evaluator _dependents;
+        [SerializeField] private Node _dependencies;
 
-        [Header("Evaluation Options")]
-        [SerializeField, Range(0f, 1f)]private float _weight;
+        [Header("Options")]
+        [SerializeField, Range(0.0f, 1.0f)]private float _weight;
         
         [SerializeField] private bool _isClamped = true;
         [SerializeField][ShowIf("_isClamped")] private float _min;
-        [SerializeField][ShowIf("_isClamped")] private float _max = 1f;
+        [SerializeField][ShowIf("_isClamped")] private float _max = 1.0f;
         
         [SerializeField] private bool _absolute = true;
 
         public float Weight
         {
             get => _weight;
-            set => _weight = Mathf.Clamp(value, 0f, 1f);
+            set => _weight = Mathf.Clamp(value, 0.0f, 1.0f);
         }
         
-        public virtual float Evaluate(EvaluationContext ctx)
+        public float Evaluate(EvaluationContext ctx)
         {
             float value = 0.0f;
 
-            NodePort outputPort = GetOutputPort("_dependents");
+            NodePort outputPort = GetOutputPort("_dependencies");
             if (outputPort != null)
             {
                 foreach (NodePort connection in outputPort.GetConnections())
                 {
-                    if (connection.node is Evaluator evaluator)
-                        value += evaluator.Evaluate(ctx) * evaluator.Weight;
+                    if (connection.node is IEvaluable evaluable)
+                    {
+                        if(connection.node is IWeightable weightable)
+                            value += evaluable.Evaluate(ctx) * weightable.Weight;
+                    }
                 }
             }
             

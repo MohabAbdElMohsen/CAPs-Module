@@ -15,9 +15,15 @@ MonoBehaviour:
   _parameterDictionary:
     keys:
     - DetectionLatency
-    - AnticipationTiming
+    - MinTime
     - HazardPreventedScore
+    - TotalWeights
+    - TotalWeightedOutcomes
+    - DetectionLatencyScore
     values:
+    - 8
+    - 3
     - 0
-    - 0
+    - 20
+    - 18
     - 0
