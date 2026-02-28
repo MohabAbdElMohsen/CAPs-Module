@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c4e0b489cd82b49a9a8e18f65ba490, type: 3}
   m_Name: EvaluationContext
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitiesModule.MetricRegistry
-  _parameterDictionary:
-    keys:
-    - DetectionLatency
-    - MinTime
-    - HazardPreventedScore
-    - TotalWeights
-    - TotalWeightedOutcomes
-    - DetectionLatencyScore
-    values:
-    - 8
-    - 3
-    - 0
-    - 20
-    - 18
-    - 0
+  Field:
+    AccessModifier: 0
+    Type: 2
+    Name: 
+  Fields:
+  - AccessModifier: 0
+    Type: 0
+    Name: SS
+  - AccessModifier: 0
+    Type: 5
+    Name: RR
+  - AccessModifier: 0
+    Type: 2
+    Name: IsDead
+  - AccessModifier: 0
+    Type: 2
+    Name: IsGrounded
+  SS: 0
+  RR: {x: 0, y: 0, z: 0}
+  IsDead: 0
+  IsGrounded: 0

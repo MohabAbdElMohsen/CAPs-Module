@@ -1,0 +1,16 @@
+{
+    "name": "CapabilitySystem.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f77da00cf61e5574a9d70406d0d0abda"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

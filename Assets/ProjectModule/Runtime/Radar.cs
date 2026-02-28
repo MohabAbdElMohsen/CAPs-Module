@@ -16,7 +16,7 @@ public class Radar : MonoBehaviour, IDetectable
     
     private void Start()
     {
-        _evaluationContext = EvaluationManager.Instance.EvaluationContext;
+        //_evaluationContext = EvaluationManager.Instance.EvaluationContext;
     }
 
     [ContextMenu("Detect")]
@@ -26,6 +26,6 @@ public class Radar : MonoBehaviour, IDetectable
         _detectionCount = 5;
         
         _avgLatency = _totalDetectionLatency / _detectionCount;
-        _evaluationContext["DetectionLatency"] =  _avgLatency;
+        //_evaluationContext["DetectionLatency"] =  _avgLatency;
     }
 }

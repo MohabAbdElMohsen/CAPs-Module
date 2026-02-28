@@ -1,17 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
-using EvaluationSystem.Utilities;
 
 namespace CapabilitySystem
 {
     [CreateAssetMenu(fileName = "EvaluationContext", menuName = "Scriptable Objects/EvaluationContext")]
     public class EvaluationContext : ScriptableObject
     {
-        [SerializeField] private ParameterDictionary _parameterDictionary;
-        
-        public float this[string key]
-        {
-            get => _parameterDictionary[key];
-            set => _parameterDictionary[key] = value;
-        }
-    }   
+#if UNITY_EDITOR
+        [SerializeField] internal FieldDefinition Field;
+        [SerializeField] internal List<FieldDefinition> Fields = new();
+#endif
+
+        public int SS;
+        public Vector3 RR;
+        public bool IsDead;
+        public bool IsGrounded;
+    }
 }
